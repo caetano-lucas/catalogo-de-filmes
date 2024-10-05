@@ -6,19 +6,7 @@
     <dd>
       <p>year: <%= movie.year %></p>
     </dd>
-      <p>synopsis: <%= movie.synopsis %></p>
-    <dd>
-      <p>country: <%= movie.country %></p>
-    </dd>
-    <dd>
-      <p>time: <%= movie.time %></p>
-    </dd>
-    <dd>
-      <p>director: <%= movie.director %></p>
-    </dd>
-    <dd>
-      <p>gender: <%= movie.gender %></p>
-    </dd>
-
+    
+    <%= link_to movie.title, movie_path(movie.id)%>
   <% end %>
 </dl>
