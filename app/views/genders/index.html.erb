@@ -1,0 +1,9 @@
+<dl>
+  <% @gender.each do | gender| %>
+    <dt>
+      <p>title: <%= gender.name %></p>
+    </dt>
+    
+    <%= link_to "Filmes com este genero", gender%>
+  <% end %>
+</dl>

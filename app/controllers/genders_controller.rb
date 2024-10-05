@@ -1,17 +1,22 @@
 class GendersController < ApplicationController
+  def show
+    @gender = Gender.find(params[:id])
+  end
+
   def index
-    
+    @gender = Gender.all
   end
 
   def new
-    
+    @gender = Gender.new
   end
 
   def create
-    
-  end
+    @gender = Gender.new(name: params[:gender][:name],)
+    if @gender.save
+      return redirect_to gender_path(@gender.id)
+    end
 
-  def show
-    
+    render :new
   end
 end

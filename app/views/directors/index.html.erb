@@ -1,0 +1,15 @@
+<dl>
+  <% @director.each do | director| %>
+    <dt>
+      <p>Nome: <%= director.name %></p>
+    </dt>
+    <dd>
+      <p>País: <%= director.country %></p>
+    </dd>
+    <dd>
+      <p>Genero favorito: <%= director.gender %></p>
+    </dd>
+    
+    <%= link_to "Filmes com este diretor", director%>
+  <% end %>
+</dl>
