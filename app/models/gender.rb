@@ -1,7 +1,3 @@
-class Gender
-  attr_reader :name
-  
-  def initialize(name:)
-    @name = name
-  end
+class Gender < ApplicationRecord
+  has_many :movies
 end

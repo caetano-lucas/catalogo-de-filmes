@@ -10,16 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_05_020905) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_05_055641) do
+  create_table "directors", force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.string "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genders", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.integer "year"
     t.text "synopsis"
     t.string "country"
     t.integer "time"
-    t.string "director"
-    t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "gender_id", default: 0, null: false
+    t.integer "director_id", default: 0, null: false
+    t.index ["director_id"], name: "index_movies_on_director_id"
+    t.index ["gender_id"], name: "index_movies_on_gender_id"
   end
+
+  add_foreign_key "movies", "directors"
+  add_foreign_key "movies", "genders"
 end
