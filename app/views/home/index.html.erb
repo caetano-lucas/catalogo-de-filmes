@@ -1,2 +1,7 @@
 <h1>Você encontrou!</h1>
 <h3>O melhor, rápido, personalizável e humilde catálogo de Filmes. </h3>
+
+<% @movies.each do | movie| %>
+  <p><%= movie.title %> </p>
+
+<% end %>
