@@ -18,6 +18,19 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to 'Home', root_path %>
+        </li>
+        <li>
+          <%= link_to 'Cadastrar novo Filme', new_movie_path %>
+        </li>
+        <li>        
+          <%= link_to 'Listar Filmes', movies_path %>
+        </li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
