@@ -15,10 +15,10 @@
   <%= m.number_field :time %>
   <br/>
   <%= m.label 'Direção'%>
-  <%= m.text_field :director %>
+  <%= m.collection_select :director_id, Director.all, :id, :name %>
   <br/>
   <%= m.label 'Gênero'%>
-  <%= m.text_field :gender %>
+  <%= m.collection_select :gender_id, Gender.all, :id, :name %>
   <br/>
   <%= m.submit 'Salvar' %>
 <% end %>

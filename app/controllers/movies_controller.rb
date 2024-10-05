@@ -17,8 +17,8 @@ class MoviesController < ApplicationController
               synopsis: params[:movie][:synopsis],
               country: params[:movie][:country],
               time: params[:movie][:time],
-              director: params[:movie][:director],
-              gender: params[:movie][:gender],)
+              director_id: params[:movie][:director_id],
+              gender_id: params[:movie][:gender_id],)
     if @movie.save
       return redirect_to movie_path(@movie.id)
     end

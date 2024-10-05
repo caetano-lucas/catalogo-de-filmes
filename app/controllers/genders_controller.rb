@@ -14,6 +14,7 @@ class GendersController < ApplicationController
   def create
     @gender = Gender.new(name: params[:gender][:name],)
     if @gender.save
+      flash[:notice] = "genero salvo com sucesso"
       return redirect_to gender_path(@gender.id)
     end
 

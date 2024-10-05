@@ -1,4 +1,10 @@
 <h2>Cadastrar novo genero</h2>
+<% if flash[:notice] %>
+  <div>
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <%= form_with model: @gender do | g | %>
   <%= g.label 'Nome'%>
   <%= g.text_field :name %>

@@ -5,7 +5,7 @@
   <%= d.label 'País de origem:'%>
   <%= d.text_field :country %>
   <%= d.label 'Gênero favorito'%>
-  <%= d.text_field :gender %>
+  <%= d.collection_select :gender_id, Gender.all, :id, :name %>
   
   <%= d.submit 'Salvar' %>
 <% end %>
