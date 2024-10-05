@@ -1,10 +1,10 @@
 <dl>
   <% @movies.each do | movie| %>
     <dt>
-      <p>title: <%= movie.title %></p>
+      <p>Título: <%= movie.title %></p>
     </dt>
     <dd>
-      <p>year: <%= movie.year %></p>
+      <p>Ano de lançamento: <%= movie.year %></p>
     </dd>
     
     <%= link_to "Descrição", movie%>

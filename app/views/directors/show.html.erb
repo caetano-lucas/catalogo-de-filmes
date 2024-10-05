@@ -13,17 +13,17 @@
      <% if @movies.present? %> 
         <% @movies.each do |movie| %>
           <dt>
-            <p>Title: <%= movie.title %></p>
+            <p>Titulo: <%= movie.title %></p>
           </dt>
           <dd>
-            <p>Year: <%= movie.year %></p>
+            <p>Ano: <%= movie.year %></p>
           </dd>
           <dd>
             <%= link_to 'Descrição', movie_path(movie) %> 
           </dd>
         <% end %>
     <% else %>
-        <p>Sem filmes cadastrados para este diretor.</p>
+        <p>Sem filmes cadastrados para este.</p>
     <% end %>
 
 </dl>

@@ -1,22 +1,22 @@
 <dl>
     <dt>
-      <p>title: <%= @movie.title %></p>
+      <p>Titulo: <%= @movie.title %></p>
     </dt>
     <dd>
-      <p>year: <%= @movie.year %></p>
+      <p>Ano de lançamento: <%= @movie.year %></p>
     </dd>
-      <p>synopsis: <%= @movie.synopsis %></p>
+      <p>Sinopse: <%= @movie.synopsis %></p>
     <dd>
-      <p>country: <%= @movie.country %></p>
-    </dd>
-    <dd>
-      <p>time: <%= @movie.time %></p>
+      <p>País de lançamento: <%= @movie.country %></p>
     </dd>
     <dd>
-      <p>director: <%= @movie.director_id %></p>
+      <p>Duração: <%= @movie.time %></p>
     </dd>
     <dd>
-      <p>gender: <%= @movie.gender_id %></p>
+      <p>Diretor: <%= @director.name %></p>
+    </dd>
+    <dd>
+      <p>Genero: <%= @gender.name %></p>
     </dd>
     <%= link_to 'Editar', edit_movie_path %>
 </dl>
