@@ -1,0 +1,11 @@
+<h2>Editar diretor</h2>
+<%= form_with model: @director do | d | %>
+  <%= d.label 'Nome'%>
+  <%= d.text_field :name %>
+  <%= d.label 'País de origem:'%>
+  <%= d.text_field :country %>
+  <%= d.label 'Gênero favorito'%>
+  <%= d.collection_select :gender_id, Gender.all, :id, :name %>
+  
+  <%= d.submit 'Salvar' %>
+<% end %>

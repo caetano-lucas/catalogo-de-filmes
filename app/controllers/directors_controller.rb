@@ -1,6 +1,7 @@
 class DirectorsController < ApplicationController
   def show
     @director = Director.find(params[:id])
+    
   end
 
   def index
@@ -20,5 +21,19 @@ class DirectorsController < ApplicationController
     end
 
     render :new
+  end
+
+  def edit
+    @director = Director.find(params[:id])
+  end
+
+  def update
+     @director = Director.find(params[:id])
+    if @director.update(name: params[:director][:name],
+      country: params[:director][:country],
+      gender: params[:director][:gender_id],)
+      return redirect_to director_path(@director.id)
+    end
+    render :edit
   end
 end

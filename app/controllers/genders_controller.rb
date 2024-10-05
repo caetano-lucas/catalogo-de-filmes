@@ -20,4 +20,16 @@ class GendersController < ApplicationController
 
     render :new
   end
+
+  def edit
+    @gender = Gender.find(params[:id])
+  end
+
+  def update
+    @gender = Gender.find(params[:id])
+    if @gender.update(name: params[:gender][:name],)
+      return redirect_to gender_path(@gender.id)
+    end
+    render :edit
+  end
 end
