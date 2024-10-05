@@ -1,6 +1,21 @@
 <dl>
-    <dt>
-      <p>Nome: <%= @gender.name %></p>
-    </dt>
-    <%= link_to 'Editar', edit_gender_path %>
+  <dt>
+    <p>Nome: <%= @gender.name %> <%= link_to 'Editar', edit_gender_path(@gender) %></p>
+  </dt>
+
+  <% if @movies.present? %> 
+    <% @movies.each do |movie| %>
+      <dt>
+        <p>Title: <%= movie.title %></p>
+      </dt>
+      <dd>
+        <p>Year: <%= movie.year %></p>
+      </dd>
+      <dd>
+        <%= link_to 'Descrição', movie_path(movie) %> 
+      </dd>
+    <% end %>
+  <% else %>
+    <p>Sem filmes cadastrados para este genero</p>
+  <% end %>
 </dl>

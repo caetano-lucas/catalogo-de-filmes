@@ -1,6 +1,7 @@
 class GendersController < ApplicationController
   def show
     @gender = Gender.find(params[:id])
+    @movies = @gender.movie
   end
 
   def index
