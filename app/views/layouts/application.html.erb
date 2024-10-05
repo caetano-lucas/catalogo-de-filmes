@@ -31,6 +31,22 @@
         </li>
       </ul>
     </nav>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to 'Cadastrar novo genero', new_gender_path %>
+        </li>
+        <li>
+          <%= link_to 'Listar Generos', genders_path %>
+        </li>
+        <li>        
+          <%= link_to 'Cadastrar novo diretor', new_director_path %>
+        </li>
+        <li>        
+          <%= link_to 'Listar diretor', directors_path %>
+        </li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
