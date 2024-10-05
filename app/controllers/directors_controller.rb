@@ -2,6 +2,7 @@ class DirectorsController < ApplicationController
   def show
     @director = Director.find(params[:id])
     @movies = @director.movie
+    @genders = @director.gender
   end
 
   def index
